@@ -1,0 +1,105 @@
+<div class="modal fade" id="modal2">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <!--<h5 class="modal-title"></h5>-->
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Do you want to reset a game?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" onclick="confirmreset()" class="btn btn-primary" data-dismiss="modal">Yes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div id="maindiv">
+
+    <div class="col-md-offset-4 col-md-3" >
+        <button class="btn btn-primary"  id="roomstatus"></button>
+        <button class="btn btn-primary" style="float: right;"type="button" onclick="leave()">Leave Room</button>
+        <table>
+            <tr>
+                <td id="" onclick="bingomessage(this.id)">1</td>
+                <td id="" onclick="bingomessage(this.id)">2</td>
+                <td id="" onclick="bingomessage(this.id)">3</td>
+                <td id="" onclick="bingomessage(this.id)">4</td>
+                <td id="" onclick="bingomessage(this.id)">5</td>
+            </tr><tr>
+                <td id="" onclick="bingomessage(this.id)">1</td>
+                <td id="" onclick="bingomessage(this.id)">2</td>
+                <td id="" onclick="bingomessage(this.id)">3</td>
+                <td id="" onclick="bingomessage(this.id)">4</td>
+                <td id="" onclick="bingomessage(this.id)">5</td>
+            </tr><tr>
+                <td id="" onclick="bingomessage(this.id)">1</td>
+                <td id="" onclick="bingomessage(this.id)">2</td>
+                <td id="" onclick="bingomessage(this.id)">3</td>
+                <td id="" onclick="bingomessage(this.id)">4</td>
+                <td id="" onclick="bingomessage(this.id)">5</td>
+            </tr><tr>
+                <td id="" onclick="bingomessage(this.id)">1</td>
+                <td id="" onclick="bingomessage(this.id)">2</td>
+                <td id="" onclick="bingomessage(this.id)">3</td>
+                <td id="" onclick="bingomessage(this.id)">4</td>
+                <td id="" onclick="bingomessage(this.id)">5</td>
+            </tr><tr>
+                <td id="" onclick="bingomessage(this.id)">1</td>
+                <td id="" onclick="bingomessage(this.id)">2</td>
+                <td id="" onclick="bingomessage(this.id)">3</td>
+                <td id="" onclick="bingomessage(this.id)">4</td>
+                <td id="" onclick="bingomessage(this.id)">5</td>
+            </tr>
+        </table><br>
+
+
+        
+        <div class="userlist-label"><p class="user">Players</p></div>
+        <div id="users"></div>
+        <button class="btn btn-success playagain" type="button" onclick="resetgame()">Play again</button>
+        
+        <!------------------chat room------------------>
+        <div id="chatbox" class="chatbox">
+        </div>
+        <form class="form-inline" action="#" style="margin-bottom: 10px;">
+            <div class="form-group">
+                <div class="input-group">
+                    <input id="input-chat" class="form-control" onkeypress="enterbutton(event)" type="text" name="message" placeholder="Enter message"> 
+                    <div class="input-group-addon sendbutton" id="chat-send" onclick="chatmessage()">
+                        Send
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"></h4>
+                </div>
+                <div class="modal-body">
+                <p id="alert"></p>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+            </div>
+        </div>
+
+
+

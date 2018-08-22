@@ -1,0 +1,124 @@
+<html>
+        <head>
+            <title>BINGO</title>
+            <script src="socket.io.js"></script>
+            <script src="jquery-3.1.1.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+            
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        </head>
+        <style>
+	    table, td {
+	        border: 1px solid green;
+	    }
+            .separator{
+                border: 2px solid #2f8dde;
+                padding: 2px;
+                border-radius: 40px;
+                width: 68px;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            .message{
+                margin:0;
+            }
+            .user{
+                margin:0px;
+            }
+            .userlist-label{
+                float: left;
+                display: inline-block;
+                /* padding: 3px; */
+                border: 2px solid lightblue;
+                padding: 3px 8px;
+                border-radius: 4px;
+                margin-right: 5px;
+                color: rgb(82, 82, 79);
+                background-color: lightblue;
+                color: #464646;
+                margin-bottom:3px;
+            }
+            .userlist{
+                float: left;
+                display: inline-block;
+                /* padding: 3px; */
+                border: 2px solid lightblue;
+                padding: 3px 8px;
+                border-radius: 4px;
+                margin-right: 5px;
+                color: rgb(82, 82, 79);
+                margin-bottom:3px;
+            }
+            .message-box{
+                position:relative;
+                margin-top:7px;
+                /*clear:both;*/
+                padding: 2px 10px;
+                margin-left: 5px;
+                background-color:rgba(50, 189, 50, 0.75);
+                color: white;
+                border-radius: 5px;               
+            }
+            .message-box-sender{
+                /* border: 1px solid green; */
+                margin: 0;
+                clear: both;
+                padding: 2px 10px;
+                margin-right: 5px;
+                background: rgb(1, 144, 1);
+                color: white;
+                border-radius: 5px;
+                margin-top:7px;
+            }
+            .chatbox{
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                margin-top: 18px;
+                margin-bottom: 5px;
+                padding-left: 10px;
+                padding-bottom:5px;
+                overflow:auto;
+                height:200px;
+            }
+            
+            table,td{
+                border: 2px solid #ccc;
+                text-align: center;
+            }
+            td,.sendbutton{
+                -webkit-touch-callout: none;
+                -webkit-user-select: none;
+                -khtml-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+            td{background-color:white;}
+            table{
+                border-collapse: collapse;
+                width:100%;
+                height: 300px;
+                max-width: 500px;
+
+                margin:2px;
+                margin-top:10px;
+            }
+            .playagain{
+                display: block;
+                clear: both;
+                margin: 45px auto;
+            }
+        </style>
+        <body style="padding:10px 0px;">
+            <div class="col-xs-12 col-sm-offset-4 col-sm-4" style="margin-top: 25px;">
+                <form  id="form" method="POST">
+                    <input  id="register-name" class="form-control" type="text" name="name" onkeypress="register(event)" id="name" placeholder="Enter your name">
+                    <br>
+                    <input class="btn btn-primary" type="button" onclick="registername()" value="Play">
+                    <input class="btn btn-default" type="button" onclick="registerguest()" value="Play as Guest">
+                </form>    
+            </div>            
+        </body>
+    <script src="script.js"></script>
+</html>
